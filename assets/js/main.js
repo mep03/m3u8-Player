@@ -1,6 +1,8 @@
 const video = document.getElementById("video");
+// CHECK SUPPORTED
 if (Hls.isSupported()) {
-  var hls = new Hls();
+  // SETUP VIDEO
+  const hls = new Hls();
   hls.loadSource("https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8");
   hls.attachMedia(video);
   video.play();
